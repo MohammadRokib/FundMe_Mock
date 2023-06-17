@@ -17,7 +17,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 
     const fundMe = await deploy("FundMe", {
         from: deployer,
-        args: [address],
+        args: [ethUsdPriceFeedAddress],
         log: true,
     })
 };
