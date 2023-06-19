@@ -12,7 +12,9 @@ const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "key";
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-    solidity: "0.8.0",
+    solidity: {
+        compilers: [{ version: "0.8.7" }, { version: "0.6.6" }],
+    },
     networks: {
         ropsten: {
             url: process.env.ROPSTEN_URL || "",
@@ -22,16 +24,22 @@ module.exports = {
             url: GOERLI_RPC_URL,
             accounts: [PRIVATE_KEY],
             chainId: 5,
+            blockConfirmations: 6,
         },
         sepolia: {
             url: SEPOLIA_RPC_URL,
             accounts: [PRIVATE_KEY],
             chainId: 11155111,
+            blockConfirmations: 6,
         },
     },
     gasReporter: {
-        enabled: process.env.REPORT_GAS !== undefined,
+        enabled: false,
+        outputFile: "gas-report.txt",
+        noColors: true,
         currency: "USD",
+        coinmarketcap: COINMARKETCAP_API_KEY,
+        token: "ETH",
     },
     etherscan: {
         apiKey: process.env.ETHERSCAN_API_KEY,
