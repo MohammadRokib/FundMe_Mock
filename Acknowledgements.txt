@@ -4,4 +4,9 @@
 [Big-Numbers](https://docs.ethers.org/v5/api/utils/bignumber/#BigNumber)
 [Transaction-Receipt](https://docs.ethers.org/v5/api/providers/types/#providers-TransactionResponse)
 [Solidity-console.log](https://hardhat.org/tutorial/debugging-with-hardhat-network#solidity-console-log)
+[Layout-of-State-Variables-in-Storage](https://docs.soliditylang.org/en/v0.8.13/internals/layout_in_storage.html)
+[Purpose of the "memory keyword"](https://stackoverflow.com/questions/33839154/)
+[Opcodes](https://github.com/crytic/evm-opcodes)
+[Conditional-ternary-Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+
 
